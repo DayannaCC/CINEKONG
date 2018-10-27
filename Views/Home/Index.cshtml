@@ -1,0 +1,361 @@
+﻿@{
+    ViewData["Title"] = "INICIO";
+}
+<link rel="stylesheet" href="~/css/styleIndex.css" asp-append-version="true" />
+
+
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/BANNER2.JPG" alt="ASP.NET"  class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    PELICULA 1
+                    <a class="btn btn-default" asp-controller="Butaca" asp-action="ElegirButaca">
+                        COMPRAR
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/BANNER3.jpg" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    THE FLASH
+                    <a class="btn btn-default" asp-controller="Butaca" asp-action="ElegirButaca">
+                        COMPRAR
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/BANNER4.jpg" alt="Package Management" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    HALLOWEEN
+                    <a class="btn btn-default" asp-controller="Butaca" asp-action="ElegirButaca">
+                        COMPRAR
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/BANNER5.jpg" alt="Microsoft Azure" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    PELICULA 4
+                    <a class="btn btn-default" href=asp-controller="Butaca" asp-action="ElegirButaca">
+                        COMPRAR
+                    </a>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="subtitulos">PELICULAS</h3>
+            <div class="row">
+                <div class="col-md-3 col-xs-3">
+                    <img src="~/images/PELI-1.jpg" class="img-responsive imagen" >
+                    <div>
+                        <h5>PIE PEQUEÑO</h5>
+                        <h5>10/12/18</h5>
+                        <div class="align">
+                            <a asp-controller="Butaca" asp-action="ElegirButaca"><img class="info" src="~/images/ticket.png" /></a>
+                            <a href="#"><img class="info" src="~/images/play.png" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                    <img src="~/images/PELI-2.jpg" class="img-responsive imagen" >
+                     <h5>RALPH EL DEMOLEDOR</h5>
+                        <h5>10/12/18</h5>
+                        <div class="align">
+                            <a asp-controller="Butaca" asp-action="ElegirButaca"><img class="info" src="~/images/ticket.png" /></a>
+                            <a href="#"><img class="info" src="~/images/play.png" /></a>
+                        </div>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                    <img src="~/images/PELI-3.jpg" class="img-responsive imagen" >
+                     <h5>CADA DIA</h5>
+                        <h5>10/12/18</h5>
+                        <div class="align">
+                            <a asp-controller="Butaca" asp-action="ElegirButaca"><img class="info" src="~/images/ticket.png" /></a>
+                            <a href="#"><img class="info" src="~/images/play.png" /></a>
+                        </div>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                    <img src="~/images/PELI-4.jpg" class="img-responsive imagen" >
+                     <h5>AVENGERS</h5>
+                        <h5>10/12/18</h5>
+                        <div class="align">
+                            <a asp-controller="Butaca" asp-action="ElegirButaca"><img class="info" src="~/images/ticket.png" /></a>
+                            <a href="#"><img class="info" src="~/images/play.png" /></a>
+                        </div>
+                </div>
+            </div>
+            <h3 class="subtitulos">MAS TRAILERS Y VIDEOS</h3>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <!-- Button trigger modal -->
+                                <button class="btnMo"  data-toggle="modal" data-target="#exampleModalCenter">
+                                <img src="~/images/trailer1.jpeg"  class="img-responsive" />
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLongTitle">ALADDIN</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/7GqYSbc1tsM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="col-md-6">
+                                <!--IMG2-->
+                                    <button class="btnMo1"  data-toggle="modal" data-target="#exampleModalCenter">
+                                    <img src="~/images/trailer2.jpg"  class="img-responsive imgT" />
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLongTitle">PET SEMATARY</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7GqYSbc1tsM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                <!--IMG3-->
+                                
+                                    <button class="btnMo2"  data-toggle="modal" data-target="#exampleModalCenter">
+                                    <img src="~/images/trailer4.jpg"  class="img-responsive imgT" />
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLongTitle">QUEEN</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7GqYSbc1tsM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                <!--IMG4-->
+                                    <button class="btnMo3"  data-toggle="modal" data-target="#exampleModalCenter">
+                                    <img src="~/images/trailer6.jpg"  class="img-responsive imgT" />
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLongTitle">DUMBO</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7GqYSbc1tsM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                <!--IMG5-->
+                                    <button class="btnMo4"  data-toggle="modal" data-target="#exampleModalCenter">
+                                    <img src="~/images/trailer5.jpeg"  class="img-responsive imgT" />
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLongTitle">FIESTA</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7GqYSbc1tsM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+            
+            <!--Noticias-->
+            <h3 class="subtitulos"><a style="text-decoration: none;color:white" asp-controller="Home" asp-action="Noticias">
+                                    NOTICIAS</a></h3>
+                   <div class="row ">
+                        <div class="col-md-12 row">
+                            <div>
+                                <div class="col-md-3">
+                                    <img src="~/images/news7.jpg"  class="img-responsive" />
+                                </div>
+                                <div class="col-md-9">
+                                    <h4>
+                                        Clueless remake 'in the works'
+                                    </h4>
+                                    <span>October 14 2018</span>
+                                    <p>
+                                     A 'Clueless' remake is said to be in the works, with
+                                      'Girls Trip' writer Tracy Oliver set to produce the motion picture.
+
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                        
+                        <div class="col-md-12 row divNews">
+                            <div>
+                                <div class="col-md-3">
+                                    <img src="~/images/news5.jpg"  class="img-responsive" />
+                                </div>
+                                <div class="col-md-9">
+                                    <h4>
+                                        Claudia Kim says backlash over Fantastic Beasts casting was 'unexpected'
+                                    </h4>
+                                    <span>October 26 2018</span>
+                                    <p>
+                                     According to Claudia Kim, the backlash over her casting in 
+                                     'Fantastic Beasts: The Crimes of Grindelwald' was "unexpected".
+                                    </p>
+                                </div>
+                            </div>   
+                        </div>
+
+                        <div class="col-md-12 row divNews">
+                            <div>
+                                <div class="col-md-3">
+                                    <img src="~/images/news6.jpg"  class="img-responsive" />
+                                </div>
+                                <div class="col-md-9">
+                                    <h4>
+                                        Johnny Depp 'axed from Pirates of the Caribbean reboot'
+                                    </h4>
+                                    <span>October 26 2018</span>
+                                    <p>
+                                     Hollywood star Johnny Depp has reportedly been axed from the
+                                      'Pirates of the Caribbean' franchise.
+                                    </p>
+                                </div>
+                            </div>   
+                        </div>
+
+                        <div class="col-md-12 row divNews">
+                            <div>
+                                <div class="col-md-3">
+                                    <img src="~/images/news8.jpg"  class="img-responsive" />
+                                </div>
+                                <div class="col-md-9">
+                                    <h4>
+                                        Liam Neeson 'cried' at Normal People script
+                                    </h4>
+                                    <span>October 26 2018</span>
+                                    <p>
+                                     Award-winning actor Liam Neeson "cried" when he first read
+                                      the script for 'Normal People' and instantly "knew it was special".
+                                    </p>
+                                </div>
+                            </div>   
+                        </div>
+                </div>
+           
+           
+        </div>
+        <div class="col-md-4 ">
+            <h3 class="subtitulos2">Promociones</h3>
+            <div class="col-md-12">
+                <div class="imgProm">
+                    <img src="~/images/prom1.jpg"  class="img-responsive" />
+                </div>
+
+                <div class="imgProm">
+                    <img src="~/images/prom2.jpg"  class="img-responsive" />
+                </div>
+
+                <div class="imgProm">
+                    <img src="~/images/prom4.jpg"  class="img-responsive" />
+                </div>
+
+                <div class="imgProm">
+                    <img src="~/images/prom3.jpg"  class="img-responsive" />
+                </div>
+             
+            </div>
+    </div>
+</div>
+
+

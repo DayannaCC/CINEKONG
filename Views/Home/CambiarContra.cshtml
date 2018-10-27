@@ -1,0 +1,26 @@
+@model CINEKONG.Models.CambiarContra
+
+@{
+    ViewData["Title"] = "Cambiar Contraseña";
+}
+
+<center>
+<h2>@ViewData["Title"]</h2>
+<br>
+<div class="row">
+<form class="col-md-4 col-md-offset-4" asp-action="Cambiar">
+  <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input id="Contra" type="password" class="form-control" name="Contra" placeholder="Contraseña">
+    </div><br>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input id="ConfiContra" type="password" class="form-control" name="ConfiContra" placeholder="Confirmar Contraseña">
+    </div><br>
+    <button type="submit" class="btn btn-success btn-block">Cambiar</button>
+    <br>
+  </div>
+</form>
+<h3>@ViewData["Message"]</h3>
+</center>
+

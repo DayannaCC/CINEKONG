@@ -1,0 +1,94 @@
+.subtitulos{
+    background-color: black;
+    border-top-right-radius: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-left-color: orangered;
+    padding: 10px;
+    color: white;
+    border-left-style: solid;
+    border-left-width: 10px;
+}
+.subtitulos2{
+    background-color: black;
+    border-top-right-radius: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px;
+    color: white;
+    border-left-style: solid;
+    border-left-width: 10px;
+    border-left-color: crimson;
+}
+.imagen{
+    height: 270px;
+    width: 180px;
+}
+.imgnews{
+    height: 150px;
+    width: 150px;
+}
+.fontnews{
+    margin-left: -180px;
+    margin-right: 180px;
+    display: block;
+}
+h5{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.modal-title{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+}
+.info{
+    width:40px;
+    height:40px;
+}
+.align{
+    margin-left: 35px;
+    margin-right: -35px;
+    display: block;
+}
+.videostyle{
+    height: 200px;
+    width: 190px;
+}
+.tr1{
+    margin-top: 35px;
+}
+.imgT{
+    height: 85px;
+    width: 180px;
+}
+.btnMo{
+    background-color: black;
+    border-bottom-color: none;
+    background-image:url(~/images/trailer1.jpeg);
+}
+.btnMo1{
+    background-color: black;
+    border-bottom-color: none;
+    background-image:url(~/images/trailer2.jpg);
+}
+.btnMo2{
+    background-color: black;
+    border-bottom-color: none;
+    background-image:url(~/images/trailer4.jpg);
+}
+.btnMo3{
+    background-color: black;
+    border-bottom-color: none;
+    background-image:url(~/images/trailer6.jpg);
+}
+.btnMo4{
+    background-color: black;
+    border-bottom-color: none;
+    background-image:url(~/images/trailer5.jpeg);
+}
+.divNews{
+    margin-top: 10px;
+}
+.imgProm{
+    margin-bottom: 10px;
+}

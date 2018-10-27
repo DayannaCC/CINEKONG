@@ -1,0 +1,42 @@
+@model CINEKONG.Models.IniciarSesion
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+}
+<h3>@ViewData["Message"]</h3>
+
+<center>
+<h2>@ViewData["Title"]</h2>
+<br>
+<div class="row">
+<form class="col-md-4 col-md-offset-4" asp-action="Iniciar">
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input id="Email" type="email" class="form-control" name="Email" placeholder="Correo" asp-for="Email" >
+  </div>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input id="Contra" type="password" class="form-control" name="Contra" placeholder="******" asp-for="Contra">
+  </div>
+  <br>
+  <div class="checkbox">
+    <label><input type="checkbox"> Recordar</label>
+  </div>
+  <br>
+  <button  type="submit" class="btn btn-success btn-block">Acceder</button>
+  <br>
+  <br>
+  <div class="row "></div>
+  <div class="col-md-4 text-left">
+    <a asp-area="" asp-controller="Home" asp-action="Registrarse">Registrarse</a>
+  </div>
+  <div class="col-md-4">
+    <a asp-area="" asp-controller="Home" asp-action="RecuperarContra">Olvidaste tu contraseña?</a>
+  </div>
+  <div class="col-md-4 text-right">
+    <a asp-area="" asp-controller="Home" asp-action="CambiarContra">Cambiar contraseña</a>
+  </div>  
+  </div>
+</form>
+</center>
+

@@ -1,0 +1,51 @@
+
+body {
+    background-color: black;
+}
+h1{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    margin-top: 40px;
+}
+.ww {
+    color: white;
+}
+
+
+
+.fila {
+    padding-right: 20px;
+}
+
+
+th, td {
+    padding: 4px;
+    padding-bottom:10px;
+
+}
+
+#tabla {
+    margin: auto;
+}
+
+.container-fluid.xd {
+    position: relative;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor:pointer;
+}
+
+.centered.w {
+        color: white;
+    
+}
+
+tr {
+    height: 30px;
+}

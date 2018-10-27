@@ -1,0 +1,67 @@
+.subtitulos{
+    background-color: black;
+    border-top-right-radius: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-left-color: orangered;
+    padding: 10px;
+    color: white;
+    border-left-style: solid;
+    border-left-width: 10px;
+}
+.subtitulos2{
+    background-color: black;
+    border-top-right-radius: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px;
+    color: white;
+    border-left-style: solid;
+    border-left-width: 10px;
+    border-left-color: crimson;
+}
+.subT{
+    margin-top: 50px;
+}
+img{
+    border-radius: 10px;
+}
+
+.picture>div{
+    position: relative;
+	bottom: 39px;
+	background-color:#000;
+	opacity:0.7;
+    font-weight:bold;
+    text-align: justify;
+}
+p{
+    text-align: justify;
+}
+.h1{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.hh1{
+    background-color:#272727;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.h2{
+    margin-top: 10px;
+    font-size: 15px;
+}
+.hh2{
+    background-color:#272727;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    height: 360px;
+}
+.m1{
+    background-color:#272727;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
