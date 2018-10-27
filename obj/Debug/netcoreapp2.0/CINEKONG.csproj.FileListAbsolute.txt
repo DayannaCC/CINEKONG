@@ -1,0 +1,11 @@
+C:\Users\Clase\CINEKONG\bin\Debug\netcoreapp2.0\CINEKONG.deps.json
+C:\Users\Clase\CINEKONG\bin\Debug\netcoreapp2.0\CINEKONG.runtimeconfig.json
+C:\Users\Clase\CINEKONG\bin\Debug\netcoreapp2.0\CINEKONG.runtimeconfig.dev.json
+C:\Users\Clase\CINEKONG\bin\Debug\netcoreapp2.0\CINEKONG.dll
+C:\Users\Clase\CINEKONG\bin\Debug\netcoreapp2.0\CINEKONG.pdb
+C:\Users\Clase\CINEKONG\obj\Debug\netcoreapp2.0\CINEKONG.csprojAssemblyReference.cache
+C:\Users\Clase\CINEKONG\obj\Debug\netcoreapp2.0\CINEKONG.csproj.CoreCompileInputs.cache
+C:\Users\Clase\CINEKONG\obj\Debug\netcoreapp2.0\CINEKONG.AssemblyInfoInputs.cache
+C:\Users\Clase\CINEKONG\obj\Debug\netcoreapp2.0\CINEKONG.AssemblyInfo.cs
+C:\Users\Clase\CINEKONG\obj\Debug\netcoreapp2.0\CINEKONG.dll
+C:\Users\Clase\CINEKONG\obj\Debug\netcoreapp2.0\CINEKONG.pdb
