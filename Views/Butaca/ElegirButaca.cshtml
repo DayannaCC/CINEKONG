@@ -2,13 +2,13 @@
 <link rel="stylesheet" href="~/css/styleButaca.css" />
 
 @{
+    ViewData["Title"] = "Selecciona tus butacas";
     var Lista = ViewBag.butacas;
     char[] alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
     int _ind = 0;
 }
 
-<h1>SELECCIONA TUS BUTACAS</h1>
-<h2 class="ww">@ViewData["Title"]</h2>
+<h3 class="ww tit">Selecciona tus butacas</h3>
 <br>
 
 <script type="text/javascript">
@@ -104,9 +104,9 @@
 
 <br />
 <br />
-
-<div class="container-fluid">
     <div class="row">
+        <div class="col-md-6 col-centered">
+            <div class="row text-center">
         <div class="col-md-1">
             <img src="~/images/seat_2.png" />
         </div>
@@ -126,5 +126,8 @@
             Ocupado
         </div>
     </div>
-</div>
+        </div>
+        
+    </div>
+    
 

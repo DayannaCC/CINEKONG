@@ -1,18 +1,19 @@
 
 body {
-    background-color: black;
+    background-color: #272727;
 }
-h1{
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
+.tit{
+    text-align: center;    
     margin-top: 40px;
 }
 .ww {
     color: white;
 }
 
-
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
 
 .fila {
     padding-right: 20px;
