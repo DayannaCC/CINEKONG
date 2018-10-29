@@ -18,7 +18,7 @@
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" style="padding:10px">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -38,10 +38,10 @@
                     <li class="fuente"><a asp-area="" asp-controller="Home" asp-action="Trailers">Trailers</a></li>
                     <li class="fuente"><a asp-area="" asp-controller="Home" asp-action="Noticias">Noticias</a></li>
                     <li class="fuente"><a asp-area="" asp-controller="Home" asp-action="CantidadEntradas">Entradas</a></li>
-                    <nav class="nav navbar-nav" style="margin-left: 200px; ">
-                  <li class="fuente"><a asp-area="" asp-controller="Home" asp-action="Registrarse"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
-                  <li class="fuente"><a asp-area="" asp-controller="Home" asp-action="IniciarSesion"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
-                  </nav>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="fuente"><a asp-area="" asp-controller="Home" asp-action="Registrarse"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="Home" asp-action="IniciarSesion"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
                 </ul>
             </div>
         </div>
@@ -50,7 +50,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - CINEKONG</p>
+            <p class="text-center">&copy; 2018 - CINEKONG</p>
         </footer>
     </div>
 
