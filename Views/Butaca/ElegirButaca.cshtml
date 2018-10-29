@@ -8,8 +8,9 @@
     int _ind = 0;
 }
 
+
+
 <h3 class="ww tit">Selecciona tus butacas</h3>
-<br>
 
 <script type="text/javascript">
     function obtenerAncho() {
@@ -18,16 +19,27 @@
     window.onload = obtenerAncho;
 
     function xd(a) {
-        //console.log(a);
-        //console.log($(a).attr("data-estado"));
-        //alert($(a).attr("data-estado"));
+        /*
+        console.log(a);
+        console.log($(a).attr("data-estado"));
+        alert($(a).attr("data-estado"));
 
-        if ($(a).attr("data-tipo")=="tradicional") {
+        */
+        if ($(a).attr("data-tipo") == "tradicional") {
             document.getElementById("Mtext").innerHTML = "La butaca " + $(a).attr("data-idbut") + " esta " + $(a).attr("data-estado");
         } else {
             document.getElementById("Mtext").innerHTML = "La butaca " + $(a).attr("data-idbut") + " no esta disponible.";
         }
+       
+        /*
+        $("#tabla tbody").html("");
+        var html = '<tr>';
+        html += '<td class="container-fluid xd">';
+        html += '<img class="centered" src="/images/seat_0.png"><span class="centered">@Lista[1].idbut.Substring(1)</span>';
+        html += '</td></tr>'
 
+        $("#tabla tbody").append(html);
+        */
         $('#myModal').modal('show');
 
 
@@ -49,10 +61,10 @@
             @if (i % 18 == 0 && i != 0)
             {
                 _ind++;
-            @:</tr><tr><td class="container-fluid xd fila"><span class="centered ww">
-            @alpha[_ind]
-            @:</span></td>
-            }
+            @:</tr><tr>
+                <td class="container-fluid xd fila">
+                    <span class="centered ww">@alpha[_ind]</span></td>
+                }
             @if (i == 0)
             {
                 <td class="container-fluid xd fila">
@@ -81,10 +93,8 @@
             </td>
         }
     </tr>
-
-
-
 </table>
+
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -104,30 +114,30 @@
 
 <br />
 <br />
-    <div class="row">
-        <div class="col-md-6 col-centered">
-            <div class="row text-center">
-        <div class="col-md-1">
-            <img src="~/images/seat_2.png" />
-        </div>
-        <div class="col-md-3 ww">
-            Su asiento
-        </div>
-        <div class="col-md-1">
-            <img src="~/images/seat_0.png" />
-        </div>
-        <div class="col-md-3 ww">
-            Disponible
-        </div>
-        <div class="col-md-1">
-            <img src="~/images/seat_1.png" />
-        </div>
-        <div class="col-md-3 ww">
-            Ocupado
+<div class="row">
+    <div class="col-md-6 col-centered">
+        <div class="row text-center">
+            <div class="col-md-1">
+                <img src="~/images/seat_2.png" />
+            </div>
+            <div class="col-md-3 ww">
+                Su asiento
+            </div>
+            <div class="col-md-1">
+                <img src="~/images/seat_0.png" />
+            </div>
+            <div class="col-md-3 ww">
+                Disponible
+            </div>
+            <div class="col-md-1">
+                <img src="~/images/seat_1.png" />
+            </div>
+            <div class="col-md-3 ww">
+                Ocupado
+            </div>
         </div>
     </div>
-        </div>
-        
-    </div>
-    
+
+</div>
+
 
