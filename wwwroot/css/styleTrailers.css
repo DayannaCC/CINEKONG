@@ -1,0 +1,23 @@
+#video{
+    float: left;
+    margin-right: 20px;
+    width: 420px;
+    height: 315px;
+}
+
+#cajaTexto{
+    padding: 50px 50px 50px 50px;
+}
+
+#texto{
+    text-align: left;
+    margin-left: 20px;
+}
+
+#section1, #section2, #section3{
+    background-color:#272727;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 11px;
+    height: 360px;
+}
