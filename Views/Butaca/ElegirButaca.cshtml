@@ -14,36 +14,31 @@
 
 <script type="text/javascript">
     function obtenerAncho() {
-        document.getElementById('screen').setAttribute('style', 'width:' + document.getElementById('tabla').offsetWidth + 'px')
-    }
-    window.onload = obtenerAncho;
+    document.getElementById('screen').setAttribute('style', 'width:' + document.getElementById('tabla').offsetWidth + 'px')
+}
+window.onload = obtenerAncho;
 
-    function xd(a) {
-        /*
-        console.log(a);
-        console.log($(a).attr("data-estado"));
-        alert($(a).attr("data-estado"));
+function xd(a) {
 
-        */
-        if ($(a).attr("data-tipo") == "tradicional") {
-            document.getElementById("Mtext").innerHTML = "La butaca " + $(a).attr("data-idbut") + " esta " + $(a).attr("data-estado");
-        } else {
-            document.getElementById("Mtext").innerHTML = "La butaca " + $(a).attr("data-idbut") + " no esta disponible.";
+    if ($(a).attr("data-tipo") == "tradicional") {
+       if($(a).attr("data-estado")=='disponible'){
+            $(a).children('img').attr('src','/images/seat_2.png')
+            $(a).attr("data-estado","seleccionada")
+            $(a).children('span').toggleClass( "w")
+        }else if($(a).attr("data-estado")=='seleccionada'){
+            $(a).children('img').attr('src','/images/seat_0.png')
+            $(a).attr("data-estado","disponible")
+            $(a).children('span').toggleClass( "w")
+        }else if($(a).attr("data-estado")=='ocupada'){
+            $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " esta ocupada.");
+            $('#myModal').modal('show');
         }
-       
-        /*
-        $("#tabla tbody").html("");
-        var html = '<tr>';
-        html += '<td class="container-fluid xd">';
-        html += '<img class="centered" src="/images/seat_0.png"><span class="centered">@Lista[1].idbut.Substring(1)</span>';
-        html += '</td></tr>'
-
-        $("#tabla tbody").append(html);
-        */
+    }else{
+        $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " no esta disponible.");
         $('#myModal').modal('show');
-
-
     }
+
+}
 </script>
 
 <div class="row text-center">
