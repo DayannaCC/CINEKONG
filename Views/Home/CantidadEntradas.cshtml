@@ -3,9 +3,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Documento sin título</title>
 <link rel="stylesheet" href="~/css/estilosEntradas.css"/>
-<link rel="stylesheet" href="~/wwwroot/css/jquery.nice-number.css"/>
+<link rel="stylesheet" href="~/css/jquery.nice-number.css"/>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="~/wwwroot/js/jquery.nice-number.js"></script>
+<script src="~/js/jquery.nice-number.js"></script>
 
 <script type="text/javascript">
 	$(function(){
@@ -14,23 +14,47 @@
 	});
 </script>
 
-
 </head>
+<!--
+<style media="screen">
+	input::-webkit-inner-spin-button,
+		input::-webkit-outer-spin-button{
+		-webkit-appearance:none;
+		}
+		input[type="number"]{
+		-moz-appearance:textfield;
+		}	
+</style>-->
 
-<body>
-<div class="box">
-	<h2> Precios </h2>
-
- 	Adultos <input type="number" value="0" /><br /><br />
- 	Niños <input type="number" value="0" /><br /><br />
- 	Adultos <input type="number" value="0" /><br /><br />
- 	Adultos <input type="number" value="0" /><br /><br />
- 	Adultos <input type="number" value="0" /><br /><br />
- 	Adultos <input type="number" value="0" /><br /><br />
-  	Adultos<input type="number" value="0" /><br /><br />
-
-    <button>Elegir Butacas</button>
-
+<body><br /><br /><br /><br /><br /><br /><br /><br />
+<div class="container">
+<div class="row">
+<center><h3>RESERVA DE ENTRADAS</h3></center>
 </div>
+<div class="row">
+	<div class="col-sm-4" style="background-color:rgb(88, 84, 107);">	
+		<table>
+			<td>
+				<tr><img src="~/images/BANNER4.jpg" alt="Package Management" class="img-responsive" /></tr><br />
+				<tr><strong>CINEKONG</strong>SANTA ANITA</tr><br />
+				<tr><strong>PELÍCULA </strong>HALLOWEEN</tr><br />
+				<tr><strong>FECHA</strong> MARTES 30 DE OCTUBRE</tr><br />
+				<tr><strong>FUNCIÓN</strong>5:00 PM</tr><br />
+			</td>
+		</table>
+	</div>	
+	<div   class="col-sm-8">
+		<table>
+			<td>
+				<tr>Precios</tr><br /><br />
+				<tr>Adultos <input type="number" value="0" /></tr><br /><br />
+				<tr>Niños <input type="number" value="0" /></tr><br /><br />
+				<tr><button>Elegir Butacas</button>	</tr><br /><br />
+			</td>
+		</table>
+	</div>
+</div>
+</div>
+
 </body>
 </html>
