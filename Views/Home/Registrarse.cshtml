@@ -1,14 +1,12 @@
 @model CINEKONG.Models.Registrarse
-
-@{
-    ViewData["Title"] = "Registrarse";
-}
+<link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
 
 <center>
 <h2>@ViewData["Title"]</h2>
 <br>
 <div class="row">
 <form class="col-md-4 col-md-offset-4" asp-action="Registrar">
+    <h1 class="subtitulos subT" >REGISTRARSE</h1>
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
         <input id="Nombres" type="text" class="form-control" name="Nombres" placeholder="Nombres" asp-for="Nombres" >
