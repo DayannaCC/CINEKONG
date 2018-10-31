@@ -1,60 +1,89 @@
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Documento sin título</title>
-<link rel="stylesheet" href="~/css/estilosEntradas.css"/>
-<link rel="stylesheet" href="~/css/jquery.nice-number.css"/>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="~/js/jquery.nice-number.js"></script>
+@{
+    ViewData["Title"] = "Eliga sus entradas";
+}
 
-<script type="text/javascript">
-	$(function(){
-            
-        $('input[type="number"]').niceNumber();
-	});
-</script>
+<link rel="stylesheet" href="~/css/estilosEntradas.css" />
 
-</head>
-<!--
-<style media="screen">
-	input::-webkit-inner-spin-button,
-		input::-webkit-outer-spin-button{
-		-webkit-appearance:none;
-		}
-		input[type="number"]{
-		-moz-appearance:textfield;
-		}	
-</style>-->
+<h3 class="tit">Reserva tus entradas</h3>
 
-<body><br /><br /><br /><br /><br /><br /><br /><br />
-<div class="container">
-<div class="row">
-<center><h3>RESERVA DE ENTRADAS</h3></center>
-</div>
-<div class="row">
-	<div class="col-sm-4" style="background-color:rgb(88, 84, 107);">	
-		<table>
-			<td>
-				<tr><img src="~/images/BANNER4.jpg" alt="Package Management" class="img-responsive" /></tr><br />
-				<tr><strong>CINEKONG</strong>SANTA ANITA</tr><br />
-				<tr><strong>PELÍCULA </strong>HALLOWEEN</tr><br />
-				<tr><strong>FECHA</strong> MARTES 30 DE OCTUBRE</tr><br />
-				<tr><strong>FUNCIÓN</strong>5:00 PM</tr><br />
-			</td>
-		</table>
-	</div>	
-	<div   class="col-sm-8">
-		<table>
-			<td>
-				<tr>Precios</tr><br /><br />
-				<tr>Adultos <input type="number" value="0" /></tr><br /><br />
-				<tr>Niños <input type="number" value="0" /></tr><br /><br />
-				<tr><button>Elegir Butacas</button>	</tr><br /><br />
-			</td>
-		</table>
-	</div>
-</div>
-</div>
+    <div class="row">
+        <div class="col-md-4 col-centered thumbnail xd">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="~/images/PELI-9.jpg" width="150" class="x" />
+                </div>
+                <div class="col-md-6 x">
+                    <span class="SubHeader">FUNCIÓN</span><br/><span class="sub1">5:00 PM</span> <br/>
+                    <span class="SubHeader">CINEKONG</span><br/><span class="sub1">Santa Anita</span> <br/>
+                    <span class="SubHeader">PELÍCULA </span><br/><span class="sub1">Venom</span> <br/>
+                    <span class="SubHeader">FECHA</span><br/><span class="sub1">Martes 30 de Octubre</span> <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <table class="table table-bordered text-center">
+        <thead>
+        <tr>
+            <th class="text-center">Tipo</td>
+            <th class="text-center">Cantidad</td>
+            <th class="text-center">Costo</td>
+            <th class="text-center">Subtotal</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Niños</td>
+            <td>
+                <button class="btn-xs btn-danger">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                
+                0
+                <button class="btn-xs btn-danger">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </td>
+            <td>S/.12.00</td>
+            <td>S/.0.00</td>
+        </tr>
+        <tr>
+            <td>3ra Edad</td>
+            <td>
+                <button class="btn-xs btn-danger">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                
+                0
+                <button class="btn-xs btn-danger">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </td>
+            <td>S/.12.00</td>
+            <td>S/.0.00</td>
+        </tr>
+        <tr>
+            <td>Adulto</td>
+            <td>
+                <button class="btn-xs btn-danger">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                
+                0
+                <button class="btn-xs btn-danger">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </td>
+            <td>S/.12.00</td>
+            <td>S/.0.00</td>
+        </tr>
+        </tbody>
+    </table>
 
-</body>
-</html>
+    <div class="text-center">
+        <button class="btn btn-danger">
+                    Siguiente
+                      <span class="glyphicon glyphicon-chevron-right"></span>     
+                </button>
+    </div>
