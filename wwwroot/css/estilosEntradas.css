@@ -3,13 +3,56 @@ body {
     color: white;
 }
 
+.ppp{
+    padding:10px;
+}
+
+table {
+    box-shadow: -7px 8px 37px #171616;
+}
+
+.table > thead > tr > th {
+    background: #d82f26;
+    border-bottom: none;
+}
+
+.table > tbody > tr > td {
+    background: #222222;
+    border-top: 1px solid #000;
+}
+
+.btncircle {
+    border-style: solid;
+    border-radius: 13px;
+    color: #fff;
+    background-color: #d82f26;
+    border-color: #d43f3a;
+    transition: background-color 0.5s;
+}
+.btncircle:hover {
+    background-color: #913936;
+}
+
+.btn-danger {
+    background-color: #d82f26;
+}
+
+.btncircle:focus {
+    outline:none;
+}
+
 .x{
     padding-top: 10px;
 }
 
 .thumbnail.xd {
     background-color: #222222;
-    border-color:black;
+    border-color: black;
+    box-shadow: -7px 8px 37px #171616;
+}
+
+hr {
+    border-top: 1px solid #222222;
 }
 
 .black{
@@ -35,10 +78,14 @@ body {
 }
 
 .SubHeader {
-    width: 30%;
     font-weight: bold;
     font-size: 1em;
-    float: left;
+}
+
+@media (max-width: 768px) {
+    .text-xs-center {
+        text-align: center;
+    }
 }
 
 .sub1{

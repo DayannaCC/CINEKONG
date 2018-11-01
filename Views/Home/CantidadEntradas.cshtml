@@ -2,88 +2,156 @@
     ViewData["Title"] = "Eliga sus entradas";
 }
 
+<script type="text/javascript">
+ 
+    function sumcant(a) {
+        var cant = $(a).parent().children('span');
+        $(a).parent().children('span').html(parseInt(cant.html()) + 1);
+    }
+
+    function rescant(a) {
+        var cant = $(a).parent().children('span');
+        if (parseInt(cant.html()) > 0) {
+            $(a).parent().children('span').html(parseInt(cant.html()) - 1);
+        }
+    }
+
+</script>
+
+
 <link rel="stylesheet" href="~/css/estilosEntradas.css" />
 
 <h3 class="tit">Reserva tus entradas</h3>
-
-    <div class="row">
-        <div class="col-md-4 col-centered thumbnail xd">
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <img src="~/images/PELI-9.jpg" width="150" class="x" />
-                </div>
-                <div class="col-md-6 x">
-                    <span class="SubHeader">FUNCIÓN</span><br/><span class="sub1">5:00 PM</span> <br/>
-                    <span class="SubHeader">CINEKONG</span><br/><span class="sub1">Santa Anita</span> <br/>
-                    <span class="SubHeader">PELÍCULA </span><br/><span class="sub1">Venom</span> <br/>
-                    <span class="SubHeader">FECHA</span><br/><span class="sub1">Martes 30 de Octubre</span> <br/>
-                </div>
+<div class="row container-fluid">
+    <div class="col-md-4 col-sm-8 col-xs-10 col-centered thumbnail xd">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                <img src="~/images/PELI-9.jpg" class="ppp" width="170" />
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 text-xs-center ppp">
+                <span class="SubHeader">FUNCIÓN</span><br /><span class="sub1">5:00 PM</span> <br />
+                <span class="SubHeader">CINEKONG</span><br /><span class="sub1">Santa Anita</span> <br />
+                <span class="SubHeader">PELÍCULA </span><br /><span class="sub1">Venom</span> <br />
+                <span class="SubHeader">FECHA</span><br /><span class="sub1">Martes 30 de Octubre</span> <br />
             </div>
         </div>
     </div>
-    <br>
-    <br>
-    <table class="table table-bordered text-center">
-        <thead>
-        <tr>
-            <th class="text-center">Tipo</td>
-            <th class="text-center">Cantidad</td>
-            <th class="text-center">Costo</td>
-            <th class="text-center">Subtotal</td>
+</div>
+<br>
+<br>
+
+<table class="table table-borderless text-center">
+    <thead>
+        <tr class="">
+            <th class="text-center">TIPO</td>
+            <th class="text-center">SUBTOTAL</td>
+            <th class="text-center">COSTO</td>
+            <th class="text-center">CANTIDAD</td>
         </tr>
-        </thead>
-        <tbody>
+    </thead>
+    <tbody>
         <tr>
             <td>Niños</td>
+            <td>S/.12.00</td>
+            <td>S/.0.00</td>
             <td>
-                <button class="btn-xs btn-danger">
+                <button class="btn-xs btncircle" onclick="sumcant(this)">
                     <span class="glyphicon glyphicon-plus"></span>
                 </button>
-                
-                0
-                <button class="btn-xs btn-danger">
+                &nbsp;&nbsp;
+                <span>0</span>
+                &nbsp;&nbsp;
+                <button class="btn-xs btncircle" onclick="rescant(this)">
                     <span class="glyphicon glyphicon-minus"></span>
                 </button>
             </td>
-            <td>S/.12.00</td>
-            <td>S/.0.00</td>
         </tr>
         <tr>
             <td>3ra Edad</td>
+            <td>S/.12.00</td>
+            <td>S/.0.00</td>
             <td>
-                <button class="btn-xs btn-danger">
+                <button class="btn-xs btncircle" onclick="sumcant(this)">
                     <span class="glyphicon glyphicon-plus"></span>
                 </button>
-                
-                0
-                <button class="btn-xs btn-danger">
+                &nbsp;&nbsp;
+                <span>0</span>
+                &nbsp;&nbsp;
+                <button class="btn-xs btncircle" onclick="rescant(this)">
                     <span class="glyphicon glyphicon-minus"></span>
                 </button>
             </td>
-            <td>S/.12.00</td>
-            <td>S/.0.00</td>
         </tr>
         <tr>
             <td>Adulto</td>
+            <td>S/.12.00</td>
+            <td>S/.0.00</td>
             <td>
-                <button class="btn-xs btn-danger">
+                <button class="btn-xs btncircle" onclick="sumcant(this)">
                     <span class="glyphicon glyphicon-plus"></span>
                 </button>
-                
-                0
-                <button class="btn-xs btn-danger">
+                &nbsp;&nbsp;
+                <span>0</span>
+                &nbsp;&nbsp;
+                <button class="btn-xs btncircle" onclick="rescant(this)">
                     <span class="glyphicon glyphicon-minus"></span>
                 </button>
             </td>
+        </tr>
+        <tr>
+            <td>Niños Pref.</td>
             <td>S/.12.00</td>
             <td>S/.0.00</td>
-        </tr>
-        </tbody>
-    </table>
-
-    <div class="text-center">
-        <button class="btn btn-danger">
-                    Siguiente
-                      <span class="glyphicon glyphicon-chevron-right"></span>     
+            <td>
+                <button class="btn-xs btncircle" onclick="sumcant(this)">
+                    <span class="glyphicon glyphicon-plus"></span>
                 </button>
-    </div>
+                &nbsp;&nbsp;
+                <span>0</span>
+                &nbsp;&nbsp;
+                <button class="btn-xs btncircle" onclick="rescant(this)">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>3ra Edad Pref.</td>
+            <td>S/.12.00</td>
+            <td>S/.0.00</td>
+            <td>
+                <button class="btn-xs btncircle" onclick="sumcant(this)">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                &nbsp;&nbsp;
+                <span>0</span>
+                &nbsp;&nbsp;
+                <button class="btn-xs btncircle" onclick="rescant(this)">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>Adulto Pref.</td>
+            <td>S/.12.00</td>
+            <td>S/.0.00</td>
+            <td>
+                <button class="btn-xs btncircle" onclick="sumcant(this)">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                &nbsp;&nbsp;
+                <span>0</span>
+                &nbsp;&nbsp;
+                <button class="btn-xs btncircle" onclick="rescant(this)">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<div class="text-center">
+    <a class="btn btn-danger" asp-controller="Butaca" asp-action="ElegirButaca">
+        Siguiente
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
