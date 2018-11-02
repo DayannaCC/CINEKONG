@@ -30,11 +30,11 @@ function xd(a) {
             $(a).attr("data-estado","disponible")
             $(a).children('span').toggleClass( "w")
         }else if($(a).attr("data-estado")=='ocupada'){
-            $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " esta ocupada.");
+            $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " esta ocupada. 🐵💔");
             $('#myModal').modal('show');
         }
     }else{
-        $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " no esta disponible.");
+        $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " no esta disponible. 🐵💔");
         $('#myModal').modal('show');
     }
 
@@ -79,8 +79,11 @@ function xd(a) {
                         <img class="centered" src="~/images/seat_1.png">
                         <span class="centered w">@Lista[i].idbut.Substring(1)</span>
                     }
-                }
-                else
+                }else if(Lista[i].estbut == "")
+                {
+                    <img class="centered" src="~/images/seat_4.png">
+                    <span class="centered w">@Lista[i].idbut.Substring(1)</span>
+                }else
                 {
                     <img class="centered" src="~/images/seat_3.png">
                     <span class="centered w">@Lista[i].idbut.Substring(1)</span>
@@ -98,11 +101,10 @@ function xd(a) {
                 <h3 class="modal-title text-center">Alerta</h3>
             </div>
             <div class="modal-body text-center" id="Mtext">
-                <p>Some text in the modal.</p>
             </div>
             <div class="modal-footer">
                 <div class="text-center">
-                    <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Aceptar</button>
                 </div>
             </div>
         </div>

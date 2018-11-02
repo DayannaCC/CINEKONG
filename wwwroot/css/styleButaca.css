@@ -2,6 +2,16 @@
 body {
     background-color: #272727;
 }
+
+.modal-header{
+    background: #d82f26;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #d82f26;
+}
+
 .tit{
     text-align: center;    
     margin-top: 40px;
