@@ -1,0 +1,73 @@
+@{
+    ViewData["Title"] = "Reserva tus entradas";
+}
+
+<link rel="stylesheet" href="~/css/estilosEntradas.css" />
+
+<h3 class="tit">Reserva tus entradas</h3>
+<div class="row container-fluid">
+    <div class="col-md-4 col-sm-8 col-xs-10 col-centered thumbnail xd">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                <img src="~/images/PELI-9.jpg" class="ppp" width="170" />
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 text-xs-center ppp">
+                <span class="SubHeader">FUNCIÓN</span><br /><span class="sub1">5:00 PM</span> <br />
+                <span class="SubHeader">CINEKONG</span><br /><span class="sub1">Santa Anita</span> <br />
+                <span class="SubHeader">PELÍCULA </span><br /><span class="sub1">Venom</span> <br />
+                <span class="SubHeader">FECHA</span><br /><span class="sub1">Martes 30 de Octubre</span> <br />
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<table class="table table-borderless text-center">
+    <thead>
+        <tr class="">
+            <th class="text-center">TIPO</td>
+            <th class="text-center">SUBTOTAL</td>
+            <th class="text-center">COSTO</td>
+            <th class="text-center">CANTIDAD</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Adulto</td>
+            <td>S/.12.00</td>
+            <td>S/.12.00</td>
+            <td>1</td>
+        </tr>
+
+            <tr>
+                <th class="SubHeader"></td><br />
+                <th></td> 
+            </tr>
+            <tr>
+                <th class="SubHeader">Correo</td><br />
+                <th><input type="text"/></td> 
+            </tr>
+            <tr>
+                <th class="SubHeader">Confirmar Correo</td><br />
+                <th><input type="text"/></td> 
+            </tr>
+            <tr>
+                <th class="SubHeader">Nombre</td><br />
+                <th><input type="text"/></td> 
+            </tr>
+            <tr>
+                <th class="SubHeader">Teléfono</td><br />
+                <th><input type="text"/></td> 
+            </tr>
+            
+          
+    </tbody> 
+</table>
+<br />
+<div class="text-center">
+    <a class="btn btn-danger" asp-controller="" asp-action="">
+        Siguiente
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>

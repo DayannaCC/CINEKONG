@@ -97,7 +97,13 @@ namespace CINEKONG.Controllers
           
             return View("CambiarContra",cambiar);
 		}
-          public IActionResult CantidadEntradas()
+        public IActionResult CantidadEntradas()
+        {
+            //ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+        public IActionResult ReservarEntradas()
         {
             //ViewData["Message"] = "Your contact page.";
 
