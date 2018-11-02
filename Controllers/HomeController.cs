@@ -4,12 +4,17 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using CINEKONG.Context;
 using CINEKONG.Models;
+
 
 namespace CINEKONG.Controllers
 {
     public class HomeController : Controller
     {
+        
         public IActionResult Index()
         {
             return View();
@@ -99,9 +104,50 @@ namespace CINEKONG.Controllers
             return View();
         }
 
+
+
+
+      //USUARIO
+
+        private readonly CinekongContext _context;
+        public HomeController(CinekongContext _context)
+        {
+            this._context = _context;
+        }
+
+
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+
+         public IActionResult Usuario() {
+
+
+            return View();
+        }
+
+        
+
+        [HttpPost]
+        public IActionResult Usuario(Usuario e) {
+
+            if (ModelState.IsValid)
+            {
+                _context.Add(e);
+                _context.SaveChanges();
+
+                return RedirectToAction("UsuarioConfirmacion");
+            }
+
+            
+
+            return View(e);
+        }
+
+        public IActionResult UsuarioConfirmacion() {
+            return View();
         }
     }
 }
