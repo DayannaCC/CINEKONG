@@ -57,7 +57,7 @@ using CINEKONG.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(40, 74, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a091f4fd3a3f48c7a2d99a56f764059f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3831398a0ce546ffbaabf1549e237ea9", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -95,7 +95,7 @@ Write(ViewData["Title"]);
             WriteLiteral("</h2>\r\n<br>\r\n<div class=\"row\">\r\n");
             EndContext();
             BeginContext(182, 481, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cd08853229ac4163bfc14a97c314850a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57ee8ecf70bc4d6b8b0fa073a58cb759", async() => {
                 BeginContext(245, 411, true);
                 WriteLiteral(@"
   <h1 class=""subtitulos subT"" >RECUPERAR CONTRASEÑA</h1>

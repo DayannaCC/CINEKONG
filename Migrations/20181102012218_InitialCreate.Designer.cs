@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CINEKONG.Migrations
 {
     [DbContext(typeof(CinekongContext))]
-    [Migration("20181102010030_InitialCreate")]
+    [Migration("20181102012218_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
