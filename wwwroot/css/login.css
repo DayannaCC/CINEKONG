@@ -3,3 +3,19 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
+
+.ww {
+    color: white;
+}
+
+hr {
+    border-top: 1px solid #222222;
+}
+
+p {
+    color: white;
+}
+
+body {
+    background-color: #272727;
+}
