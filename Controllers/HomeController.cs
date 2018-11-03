@@ -156,21 +156,5 @@ namespace CINEKONG.Controllers
             return View();
         }
 
-      
-            
-
-        [HttpPost]
-        public IActionResult IniciarSesion(Usuario e) {
-
-            if (ModelState.IsValid)
-            {
-                var result = _signInManager
-
-                return RedirectToAction("UsuarioConfirmacion");
-            }
-
-            
-
-            return View(e);
-        }
+    }
 }

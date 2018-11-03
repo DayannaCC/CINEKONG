@@ -8,8 +8,6 @@ namespace CINEKONG.Models
     public class Usuario
     {
         [Key]
-
-        public int UsuarioId { get; set; }
         public string Correo { get; set; }
 
         [Required(ErrorMessage="Es necesario que ingrese una contraseña")]

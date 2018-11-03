@@ -10,10 +10,7 @@ namespace CINEKONG.Context
 
         }
 
-        public CinekongContext()
-        {
-        }
-
+     
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
