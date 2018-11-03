@@ -155,5 +155,9 @@ namespace CINEKONG.Controllers
         public IActionResult UsuarioConfirmacion() {
             return View();
         }
-    }
+
+      
+            
+
+        }
 }
