@@ -33,7 +33,7 @@ function xd(a) {
             $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " esta ocupada. 🐵💔");
             $('#myModal').modal('show');
         }
-    }else{
+    }else if ($(a).attr("data-tipo") == "preferencial") {
         $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " no esta disponible. 🐵💔");
         $('#myModal').modal('show');
     }
