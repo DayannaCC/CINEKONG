@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CINEKONG.Context;
 using CINEKONG.Models;
+using Microsoft.AspNetCore.Http;
 
 
 namespace CINEKONG.Controllers
@@ -17,12 +18,16 @@ namespace CINEKONG.Controllers
         
         public IActionResult Index()
         {
+            //Usuario objUser =  new Usuario();
+            //objUser.Correo = "test@gmail.com";
+            //objUser.Nombres = "Test";
+
             return View();
         }
 
         public IActionResult Noticias()
         {
-            ViewData["Message"] = "Your application description page.";
+            
 
             return View();
         }
@@ -44,6 +49,8 @@ namespace CINEKONG.Controllers
 
         public IActionResult IniciarSesion()
         {
+            HttpContext.Session.SetString("User", "test@gmail.com");
+            Console.WriteLine("Entro1");
             return View();
         }
 
@@ -52,12 +59,17 @@ namespace CINEKONG.Controllers
              IniciarSesion iniciar)
 		{
             ViewData["Message"] = "";
+            var objUser = HttpContext.Session.GetString("User");
+            Console.WriteLine("Entro2"+ objUser);
+            
             return View("IniciarSesion",iniciar);
 		}
 
 
         public IActionResult Registrarse()
         {
+            var objUser = HttpContext.Session.GetString("User");
+            Console.WriteLine("Entro2"+ objUser);
             return View();
         }
 
@@ -130,14 +142,14 @@ namespace CINEKONG.Controllers
 
          public IActionResult Usuario() {
 
-
             return View();
         }
 
         
 
         [HttpPost]
-        public IActionResult Usuario(Usuario e) {
+        public IActionResult Usuario(Usuario e) 
+        {
 
             if (ModelState.IsValid)
             {

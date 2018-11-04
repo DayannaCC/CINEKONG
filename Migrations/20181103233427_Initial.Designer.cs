@@ -10,9 +10,10 @@ using System;
 namespace CINEKONG.Migrations
 {
     [DbContext(typeof(CinekongContext))]
-    partial class CinekongContextModelSnapshot : ModelSnapshot
+    [Migration("20181103233427_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
