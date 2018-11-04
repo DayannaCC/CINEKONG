@@ -46,25 +46,7 @@ namespace CINEKONG.Controllers
             return View();
         }
         
-
-        public IActionResult IniciarSesion()
-        {
-            HttpContext.Session.SetString("User", "test@gmail.com");
-            Console.WriteLine("Entro1");
-            return View();
-        }
-
-        [HttpPost]
-		public IActionResult Iniciar(
-             IniciarSesion iniciar)
-		{
-            ViewData["Message"] = "";
-            var objUser = HttpContext.Session.GetString("User");
-            Console.WriteLine("Entro2"+ objUser);
-            
-            return View("IniciarSesion",iniciar);
-		}
-
+        
 
         public IActionResult Registrarse()
         {
