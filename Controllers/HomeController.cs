@@ -45,7 +45,10 @@ namespace CINEKONG.Controllers
 
             return View();
         }
-        
+
+        public IActionResult Prueba(){
+            return View();
+        }
         
 
         public IActionResult Registrarse()
