@@ -30,11 +30,11 @@ function xd(a) {
             $(a).attr("data-estado","disponible")
             $(a).children('span').toggleClass( "w")
         }else if($(a).attr("data-estado")=='ocupada'){
-            $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " esta ocupada. 🐵💔");
+            $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " esta ocupada.<br/>🙉💔");
             $('#myModal').modal('show');
         }
     }else if ($(a).attr("data-tipo") == "preferencial") {
-        $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " no esta disponible. 🐵💔");
+        $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " no esta disponible.<br/>🙉💔");
         $('#myModal').modal('show');
     }
 
@@ -100,7 +100,8 @@ function xd(a) {
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h3 class="modal-title text-center">Alerta</h3>
             </div>
-            <div class="modal-body text-center" id="Mtext">
+            <div class="modal-body text-center">
+                <span class="spanmodal" id="Mtext"> </span>
             </div>
             <div class="modal-footer">
                 <div class="text-center">
@@ -119,20 +120,26 @@ function xd(a) {
             <div class="col-md-1">
                 <img src="~/images/seat_2.png" />
             </div>
-            <div class="col-md-3 ww">
+            <div class="col-md-2 ww">
                 Su asiento
             </div>
             <div class="col-md-1">
                 <img src="~/images/seat_0.png" />
             </div>
-            <div class="col-md-3 ww">
+            <div class="col-md-2 ww">
                 Disponible
             </div>
             <div class="col-md-1">
                 <img src="~/images/seat_1.png" />
             </div>
-            <div class="col-md-3 ww">
+            <div class="col-md-2 ww">
                 Ocupado
+            </div>
+            <div class="col-md-1">
+                <img src="~/images/seat_3.png" />
+            </div>
+            <div class="col-md-2 ww">
+                Preferencial
             </div>
         </div>
     </div>
