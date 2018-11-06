@@ -1,3 +1,7 @@
+body {
+    background-color: #272727;
+    color: white;
+}
 .subT{
     margin-top: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
