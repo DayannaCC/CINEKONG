@@ -50,6 +50,10 @@ namespace CINEKONG.Controllers
             return View();
         }
         
+        public IActionResult Promociones(){
+            return View();
+        }
+        
 
         public IActionResult Registrarse()
         {
