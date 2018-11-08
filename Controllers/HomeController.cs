@@ -41,8 +41,6 @@ namespace CINEKONG.Controllers
 
         public IActionResult Trailers()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
@@ -55,23 +53,7 @@ namespace CINEKONG.Controllers
         }
         
 
-        public IActionResult Registrarse()
-        {
-            var objUser = HttpContext.Session.GetString("User");
-            Console.WriteLine("Entro2"+ objUser);
-            return View();
-        }
-
-        [HttpPost]
-		public IActionResult Registrar(
-             Registrarse registrarse)
-		{
-          
-            ViewData["Message"] = "Registro Exitoso";
-            
-
-            return View("Registrarse",registrarse);
-		}
+       
         public IActionResult RecuperarContra()
         {
             return View();
