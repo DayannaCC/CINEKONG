@@ -7,12 +7,20 @@
     function sumcant(a) {
         var cant = $(a).parent().children('span');
         $(a).parent().children('span').html(parseInt(cant.html()) + 1);
+        calcularCosto(a);
+    }
+
+    function calcularCosto(a){
+        var prec=$(a).parent().parent().children('#precio');
+        var cant = $(a).parent().children('span');
+        $(a).parent().parent().children('#costo').html('S/.'+(parseFloat(prec.html().substring(3))*cant.html()).toFixed(2));
     }
 
     function rescant(a) {
         var cant = $(a).parent().children('span');
         if (parseInt(cant.html()) > 0) {
             $(a).parent().children('span').html(parseInt(cant.html()) - 1);
+            calcularCosto(a);
         }
     }
 
@@ -52,8 +60,8 @@
     <tbody>
         <tr>
             <td>Niños</td>
-            <td>S/.12.00</td>
-            <td>S/.0.00</td>
+            <td id="precio">S/.12.00</td>
+            <td id="costo">S/.0.00</td>
             <td>
                 <button class="btn-xs btncircle" onclick="sumcant(this)">
                     <span class="glyphicon glyphicon-plus"></span>
@@ -68,8 +76,8 @@
         </tr>
         <tr>
             <td>3ra Edad</td>
-            <td>S/.12.00</td>
-            <td>S/.0.00</td>
+            <td id="precio">S/.12.00</td>
+            <td id="costo">S/.0.00</td>
             <td>
                 <button class="btn-xs btncircle" onclick="sumcant(this)">
                     <span class="glyphicon glyphicon-plus"></span>
@@ -84,8 +92,8 @@
         </tr>
         <tr>
             <td>Adulto</td>
-            <td>S/.12.00</td>
-            <td>S/.0.00</td>
+            <td id="precio">S/.12.00</td>
+            <td id="costo">S/.0.00</td>
             <td>
                 <button class="btn-xs btncircle" onclick="sumcant(this)">
                     <span class="glyphicon glyphicon-plus"></span>
@@ -100,8 +108,8 @@
         </tr>
         <tr>
             <td>Niños Pref.</td>
-            <td>S/.12.00</td>
-            <td>S/.0.00</td>
+            <td id="precio">S/.12.00</td>
+            <td id="costo">S/.0.00</td>
             <td>
                 <button class="btn-xs btncircle" onclick="sumcant(this)">
                     <span class="glyphicon glyphicon-plus"></span>
@@ -116,8 +124,8 @@
         </tr>
         <tr>
             <td>3ra Edad Pref.</td>
-            <td>S/.12.00</td>
-            <td>S/.0.00</td>
+            <td id="precio">S/.12.00</td>
+            <td id="costo">S/.0.00</td>
             <td>
                 <button class="btn-xs btncircle" onclick="sumcant(this)">
                     <span class="glyphicon glyphicon-plus"></span>
@@ -132,8 +140,8 @@
         </tr>
         <tr>
             <td>Adulto Pref.</td>
-            <td>S/.12.00</td>
-            <td>S/.0.00</td>
+            <td id="precio">S/.12.00</td>
+            <td id="costo">S/.0.00</td>
             <td>
                 <button class="btn-xs btncircle" onclick="sumcant(this)">
                     <span class="glyphicon glyphicon-plus"></span>
