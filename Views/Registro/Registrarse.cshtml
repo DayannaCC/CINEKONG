@@ -1,0 +1,61 @@
+@model Usuario;
+<link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+
+<center>
+<h2>@ViewData["Title"]</h2>
+<h2>@ViewData["Message"]</h2>
+<br>
+<div class="row">
+<form class="col-md-4 col-md-offset-4" asp-action="Usuario" method="post">
+      @Html.ValidationSummary()
+    <h1 class="subtitulos subT ww" >REGISTRARSE 2</h1>
+
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input id="Email" type="email" class="form-control" name="Correo" placeholder="Email" asp-for="Correo">
+    </div><br>
+
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input id="Contra" type="password" class="form-control" name="Contraseña" placeholder="Contraseña"  asp-for="Contraseña">
+    </div><br>
+
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input id="Nombres" type="text" class="form-control" name="Nombres" placeholder="Nombres" asp-for="Nombres" >
+    </div><br>
+
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input id="ApePaterno" type="text" class="form-control" name="Apellidos" placeholder="Apellido Paterno" asp-for="Apellidos" >
+    </div><br>
+
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        <input id="FecNac" type="date" class="form-control" name="FecNac" placeholder="Fecha de Nacimiento"  asp-for="FecNac">
+    </div><br> 
+
+    <div class="form-group">
+        <input type="submit" value="Registrar" class="btn btn-danger btn-block" />
+    </div> 
+
+    <!-- 
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input id="ApeMaterno" type="text" class="form-control" name="ApeMaterno" placeholder="Apellido Materno" asp-for="ApeMaterno">
+    </div><br>
+    
+  
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input id="ConfiContra" type="password" class="form-control" name="ConfiContra" placeholder="Confirmar Contraseña" asp-for="ConfiContra">
+    </div><br>
+    
+    <div class="checkbox">
+        <label><input type="checkbox"/>Acepto los <a>Términos y condiciones.</a> </label>
+    </div><br>
+     -->
+</form>
+</div>
+<h3>@ViewData["Message"]</h3>
+</center>

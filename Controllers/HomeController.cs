@@ -123,39 +123,6 @@ namespace CINEKONG.Controllers
         }
 
 
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-
-         public IActionResult Usuario() {
-
-            return View();
-        }
-
         
-
-        [HttpPost]
-        public IActionResult Usuario(Usuario e) 
-        {
-
-            if (ModelState.IsValid)
-            {
-                _context.Add(e);
-                _context.SaveChanges();
-
-                return RedirectToAction("UsuarioConfirmacion");
-            }
-
-            
-
-            return View(e);
-        }
-
-        public IActionResult UsuarioConfirmacion() {
-            return View();
-        }
-
     }
 }
