@@ -1,11 +1,20 @@
 body {
     background-color: #272727;
-    color: white;
 }
-.subT{
+
+.subT {
     margin-top: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.imglogin{
+    padding-top: 5px;
+    padding-bottom: 20px;
 }
 
 .ww {
@@ -22,4 +31,22 @@ p {
 
 body {
     background-color: #272727;
+}
+
+a {
+    color: white;
+}
+
+.wrapper {
+    margin-top: 80px;
+    margin-bottom: 70px;
+}
+
+.form-signin {
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    margin: auto;
+    background-color: #222222;
+    border-color: black;
+    box-shadow: -7px 8px 37px #171616;
 }
