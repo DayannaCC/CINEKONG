@@ -7,7 +7,50 @@
     char[] alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
     int _ind = 0;
 }
+<nav class="navbar navbar-inverse navbar-fixed-top" style="padding:10px">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
+                
+    <a asp-area="" asp-controller="InicioSesion" asp-action="IndexIS" class="navbar-brand">
+        <img src="~/images/logo-app.png" height="30"  style="margin-top:-5px;" />
+    </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IndexIS">Inicio</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PeliculasIS">Peliculas</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="TrailersIS">Trailers</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="NoticiasIS">Noticias</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PruebaIS">Prueba</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <!--  
+                    <li class="fuente"><a asp-area="" asp-controller="Registro" asp-action="Registrarse"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IniciarSesion"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
+                    -->
+                     <li class="fuente dropdown"><a class="glyphicon glyphicon-user" data-toggle="dropdown" href="#"> 
+                         <span class="caret"></span> @ViewBag.Nombre </a>  
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Configuración</a></li>
+                      <li><a href="#">Mis eventos</a></li>
+                      <li><a href="#">Asociar</a></li>
+                      <li><a href="/Home/index">Salir</a></li>
+
+                    </ul>
+                  </li>
+            
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 
 <h3 class="ww tit">Selecciona tus butacas</h3>
