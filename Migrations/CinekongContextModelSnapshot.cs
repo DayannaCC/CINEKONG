@@ -18,6 +18,21 @@ namespace CINEKONG.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.3-rtm-10026");
 
+            modelBuilder.Entity("CINEKONG.Models.Butaca", b =>
+                {
+                    b.Property<string>("idbut")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(30);
+
+                    b.Property<string>("estbut");
+
+                    b.Property<string>("tipbut");
+
+                    b.HasKey("idbut");
+
+                    b.ToTable("Butaca");
+                });
+
             modelBuilder.Entity("CINEKONG.Models.Usuario", b =>
                 {
                     b.Property<string>("Correo")
@@ -38,6 +53,38 @@ namespace CINEKONG.Migrations
                     b.HasKey("Correo");
 
                     b.ToTable("Usuario");
+                });
+
+            modelBuilder.Entity("CINEKONG.Models.UsuarioButaca", b =>
+                {
+                    b.Property<string>("idbut");
+
+                    b.Property<string>("Correo");
+
+                    b.Property<int>("cantidad");
+
+                    b.Property<double>("costo");
+
+                    b.Property<double>("subtotal");
+
+                    b.HasKey("idbut", "Correo");
+
+                    b.HasIndex("Correo");
+
+                    b.ToTable("UsuarioButaca");
+                });
+
+            modelBuilder.Entity("CINEKONG.Models.UsuarioButaca", b =>
+                {
+                    b.HasOne("CINEKONG.Models.Usuario", "usuario")
+                        .WithMany("UsuarioButacas")
+                        .HasForeignKey("Correo")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CINEKONG.Models.Butaca", "butaca")
+                        .WithMany("UsuarioButacas")
+                        .HasForeignKey("idbut")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

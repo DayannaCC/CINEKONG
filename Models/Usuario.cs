@@ -5,7 +5,9 @@ using System.Collections.Generic;
 
 namespace CINEKONG.Models
 {
+        using System.Collections.Generic;
     public class Usuario
+
     {
         [Key]
         [MaxLength(100)]
@@ -24,5 +26,11 @@ namespace CINEKONG.Models
         public DateTime FecNac { get; set; }
 
         
+        public List<UsuarioButaca> UsuarioButacas { get; set; }
+
+        public Usuario(){
+            UsuarioButacas= new List<UsuarioButaca>();
+        }
+             
     }
 }
