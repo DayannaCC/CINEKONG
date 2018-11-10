@@ -43,7 +43,7 @@ namespace CINEKONG.Controllers
 		public IActionResult Iniciar(IniciarSesion iniciar)
 		{
             try{
-                 var usuario = (from m in _context.Usuario where (m.Correo == iniciar.Email && m.Contraseña ==iniciar.Contra)  select m.Correo).Single();
+                 var usuario = (from m in _context.Usuario where (m.Correo == iniciar.Email && m.Contraseña ==iniciar.Contra)  select m.Nombres).Single();
                  
                  HttpContext.Session.SetString("User", usuario);
                

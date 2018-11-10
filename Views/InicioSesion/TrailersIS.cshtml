@@ -41,16 +41,20 @@
                     -->
                      <li class="fuente dropdown"><a class="glyphicon glyphicon-user" data-toggle="dropdown" href="#"> 
                          <span class="caret"></span>@ViewBag.Nombre</a>  
+                    <ul class="nav navbar-nav navbar-right">
+                     <li class="fuente">
+                         <a data-toggle="dropdown">
+                             <img src="~/images/login.png" width="25">&nbsp;&nbsp; 
+                              @ViewBag.Nombre
+                             <span class="caret"></span>
+                         </a> 
                     <ul class="dropdown-menu">
                       <li><a href="#">Configuración</a></li>
                       <li><a href="#">Mis eventos</a></li>
                       <li><a href="#">Asociar</a></li>
                       <li><a href="/Home/index">Salir</a></li>
-
                     </ul>
                   </li>
-            
-                
                 </ul>
             </div>
         </div>

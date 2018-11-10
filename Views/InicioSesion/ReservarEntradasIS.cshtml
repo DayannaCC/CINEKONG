@@ -27,12 +27,12 @@
                     <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PruebaIS">Prueba</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <!--  
-                    <li class="fuente"><a asp-area="" asp-controller="Registro" asp-action="Registrarse"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
-                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IniciarSesion"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
-                    -->
-                     <li class="fuente dropdown"><a class="glyphicon glyphicon-user" data-toggle="dropdown" href="#"> 
-                         <span class="caret"></span>@ViewBag.Nombre</a>  
+                     <li class="fuente">
+                         <a data-toggle="dropdown">
+                             <img src="~/images/login.png" width="25">&nbsp;&nbsp; 
+                              @ViewBag.Nombre
+                             <span class="caret"></span>
+                         </a> 
                     <ul class="dropdown-menu">
                       <li><a href="#">Configuración</a></li>
                       <li><a href="#">Mis eventos</a></li>
@@ -40,8 +40,6 @@
                       <li><a href="/Home/index">Salir</a></li>
                     </ul>
                   </li>
-            
-                
                 </ul>
             </div>
         </div>
