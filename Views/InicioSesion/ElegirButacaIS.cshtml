@@ -1,0 +1,157 @@
+
+<link rel="stylesheet" href="~/css/styleButaca.css" />
+
+@{
+    ViewData["Title"] = "Selecciona tus butacas";
+    var Lista = ViewBag.butacas;
+    char[] alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+    int _ind = 0;
+}
+
+
+
+<h3 class="ww tit">Selecciona tus butacas</h3>
+
+<script type="text/javascript">
+    function obtenerAncho() {
+    document.getElementById('screen').setAttribute('style', 'width:' + document.getElementById('tabla').offsetWidth + 'px')
+}
+window.onload = obtenerAncho;
+
+function xd(a) {
+
+    if ($(a).attr("data-tipo") == "tradicional") {
+       if($(a).attr("data-estado")=='disponible'){
+            $(a).children('img').attr('src','/images/seat_2.png')
+            $(a).attr("data-estado","seleccionada")
+            $(a).children('span').toggleClass( "w")
+        }else if($(a).attr("data-estado")=='seleccionada'){
+            $(a).children('img').attr('src','/images/seat_0.png')
+            $(a).attr("data-estado","disponible")
+            $(a).children('span').toggleClass( "w")
+        }else if($(a).attr("data-estado")=='ocupada'){
+            $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " esta ocupada.<br/>🙉💔");
+            $('#myModal').modal('show');
+        }
+    }else if ($(a).attr("data-tipo") == "preferencial") {
+        $('#Mtext').html("La butaca " + $(a).attr("data-idbut") + " no esta disponible.<br/>🙉💔");
+        $('#myModal').modal('show');
+    }
+
+}
+</script>
+
+<div class="row text-center">
+    <div class="col-md-12">
+        <img id="screen" src="~/images/screen.png">
+    </div>
+</div>
+
+<br />
+
+<table id="tabla">
+    <tr>
+        @for (var i = 0; i < Lista.Count; i++)
+        {
+            @if (i % 18 == 0 && i != 0)
+            {
+                _ind++;
+            @:</tr><tr>
+                <td class="container-fluid xd fila">
+                    <span class="centered ww">@alpha[_ind]</span></td>
+                }
+            @if (i == 0)
+            {
+                <td class="container-fluid xd fila">
+                    <span class="centered ww">@alpha[_ind]</span>
+                </td>
+            }
+            <td class="container-fluid xd" data-estado="@Lista[i].estbut" data-tipo="@Lista[i].tipbut" data-idbut="@Lista[i].idbut" onclick="xd(this)">
+                @if (Lista[i].tipbut == "tradicional")
+                {
+                    if (Lista[i].estbut == "disponible")
+                    {
+                        <img class="centered" src="~/images/seat_0.png">
+                        <span class="centered">@Lista[i].idbut.Substring(1)</span>
+                    }
+                    else if (Lista[i].estbut == "ocupada")
+                    {
+                        <img class="centered" src="~/images/seat_1.png">
+                        <span class="centered w">@Lista[i].idbut.Substring(1)</span>
+                    }
+                }else if(Lista[i].estbut == "")
+                {
+                    <img class="centered" src="~/images/seat_4.png">
+                    <span class="centered w">@Lista[i].idbut.Substring(1)</span>
+                }else
+                {
+                    <img class="centered" src="~/images/seat_3.png">
+                    <span class="centered w">@Lista[i].idbut.Substring(1)</span>
+                }
+            </td>
+        }
+    </tr>
+</table>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title text-center">Alerta</h3>
+            </div>
+            <div class="modal-body text-center">
+                <span class="spanmodal" id="Mtext"> </span>
+            </div>
+            <div class="modal-footer">
+                <div class="text-center">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+<div class="row">
+    <div class="col-md-6 col-centered">
+        <div class="row text-center">
+            <div class="col-md-1">
+                <img src="~/images/seat_2.png" />
+            </div>
+            <div class="col-md-2 ww">
+                Su asiento
+            </div>
+            <div class="col-md-1">
+                <img src="~/images/seat_0.png" />
+            </div>
+            <div class="col-md-2 ww">
+                Disponible
+            </div>
+            <div class="col-md-1">
+                <img src="~/images/seat_1.png" />
+            </div>
+            <div class="col-md-2 ww">
+                Ocupado
+            </div>
+            <div class="col-md-1">
+                <img src="~/images/seat_3.png" />
+            </div>
+            <div class="col-md-2 ww">
+                Preferencial
+            </div>
+        </div>
+    </div>
+
+</div>
+<br><br>
+<div class="text-center">
+    <a class="btn btn-danger" asp-controller="InicioSesion" asp-action="ReservarEntradasIS">
+        Siguiente
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+<br>
+
+

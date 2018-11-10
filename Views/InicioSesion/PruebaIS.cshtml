@@ -1,0 +1,77 @@
+@{
+    ViewData["Title"] = "Películas";
+}
+
+<link rel="stylesheet" href="~/css/estilosEntradas.css" />
+<nav class="navbar navbar-inverse navbar-fixed-top" style="padding:10px">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                
+    <a asp-area="" asp-controller="InicioSesion" asp-action="IndexIS" class="navbar-brand">
+        <img src="~/images/logo-app.png" height="30"  style="margin-top:-5px;" />
+    </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IndexIS">Inicio</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PeliculasIS">Peliculas</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="TrailersIS">Trailers</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="NoticiasIS">Noticias</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PruebaIS">Prueba</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <!--  
+                    <li class="fuente"><a asp-area="" asp-controller="Registro" asp-action="Registrarse"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IniciarSesion"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
+                    -->
+                     <li class="fuente dropdown"><a class="glyphicon glyphicon-user" data-toggle="dropdown" href="#"> 
+                         <span class="caret"></span>@ViewBag.Nombre</a>  
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Configuración</a></li>
+                      <li><a href="#">Mis eventos</a></li>
+                      <li><a href="#">Asociar</a></li>
+                      <li><a href="/Home/index">Salir</a></li>
+
+                    </ul>
+                  </li>
+            
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<h3 class="tit"><b>Bohemian Rhapsody</b></h3>
+<div class="row container-fluid">
+    <div class="col-md-6 col-sm-6 col-xs-12 col-centered thumbnail xd">
+        <div class="row">
+            <div class="col-md-4 col-sm-8 col-xs-12 text-center">
+                <img src="~/images/PELI-9.jpg" class="ppp" width="170" />
+            </div>
+            <div class="col-md-8 col-sm-4 col-xs-12 text-xs-center ppp">
+                <span class="SubHeader">SINOPSIS</span><br /><span class="sub1">Biografia del cantante Freddie Mercury, que narra su etapa en Queen, la mítica banda británica que el cantante lideró junto a Brian May, Roger Taylor y John Deacon.</span> <br />
+                <span class="SubHeader">DIRECTOR </span><br /><span class="sub1">Bryan Singer</span> <br />
+                <span class="SubHeader">ACTORES</span><br /><span class="sub1">Rami Malek, Aidan Gille</span> <br />
+            </div>
+        </div>
+    </div>
+</div><br />
+<div class="row container-fluid">
+    <div class="col-md-6 col-sm-6 col-xs-12 col-centered ">
+    <center>
+        <iframe  width="420" height="345" src="https://www.youtube.com/embed/mP0VHJYFOAU"></iframe>
+
+    </center>
+    
+    </div>
+    
+</div>
+<br>
+<br>

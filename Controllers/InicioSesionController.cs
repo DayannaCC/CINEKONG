@@ -47,8 +47,9 @@ namespace CINEKONG.Controllers
                  
                  HttpContext.Session.SetString("User", usuario);
                  var objUser = HttpContext.Session.GetString("User");
-                 ViewBag.Nombre = "MARCO";
-                 Console.WriteLine("Entro2"+ objUser);
+                 ViewBag.Nombre = objUser;
+                 
+                 Console.WriteLine(objUser);
                
             }catch(Exception e){
                 Console.WriteLine(e);
@@ -67,6 +68,37 @@ namespace CINEKONG.Controllers
 
 
         public IActionResult PeliculasIS(){
+            return View();
+        }
+
+        public IActionResult TrailersIS(){
+            return View();
+        }
+
+         public IActionResult PruebaIS(){
+            return View();
+        }
+
+        public IActionResult NoticiasIS(){
+            return View();
+        }
+        
+        public IActionResult IndexIS(){
+            return View();
+        }
+        
+        public IActionResult ReservarEntradasIS(){
+            return View();
+        }
+        
+        public IActionResult CantidadEntradasIS(){
+            return View();
+        }
+
+        public IActionResult ElegirButacaIS(){
+             var repositorio=new RepositorioButacas();
+            var butacas=repositorio.obtenerButacas();
+            ViewBag.butacas=butacas;
             return View();
         }
     }

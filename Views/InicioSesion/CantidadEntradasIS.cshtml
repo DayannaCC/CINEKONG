@@ -1,0 +1,209 @@
+@{
+    ViewData["Title"] = "Eliga sus entradas";
+}
+
+<script type="text/javascript">
+ 
+    function sumcant(a) {
+        var cant = $(a).parent().children('span');
+        $(a).parent().children('span').html(parseInt(cant.html()) + 1);
+        calcularCosto(a);
+    }
+
+    function calcularCosto(a){
+        var prec=$(a).parent().parent().children('#precio');
+        var cant = $(a).parent().children('span');
+        $(a).parent().parent().children('#costo').html('S/.'+(parseFloat(prec.html().substring(3))*cant.html()).toFixed(2));
+    }
+
+    function rescant(a) {
+        var cant = $(a).parent().children('span');
+        if (parseInt(cant.html()) > 0) {
+            $(a).parent().children('span').html(parseInt(cant.html()) - 1);
+            calcularCosto(a);
+        }
+    }
+
+</script>
+
+
+<link rel="stylesheet" href="~/css/estilosEntradas.css" />
+<nav class="navbar navbar-inverse navbar-fixed-top" style="padding:10px">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                
+    <a asp-area="" asp-controller="InicioSesion" asp-action="IndexIS" class="navbar-brand">
+        <img src="~/images/logo-app.png" height="30"  style="margin-top:-5px;" />
+    </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IndexIS">Inicio</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PeliculasIS">Peliculas</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="TrailersIS">Trailers</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="NoticiasIS">Noticias</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PruebaIS">Prueba</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <!--  
+                    <li class="fuente"><a asp-area="" asp-controller="Registro" asp-action="Registrarse"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IniciarSesion"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
+                    -->
+                     <li class="fuente dropdown"><a class="glyphicon glyphicon-user" data-toggle="dropdown" href="#"> 
+                         <span class="caret"></span>@ViewBag.Nombre</a>  
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Configuración</a></li>
+                      <li><a href="#">Mis eventos</a></li>
+                      <li><a href="#">Asociar</a></li>
+                      <li><a href="/Home/index">Salir</a></li>
+
+                    </ul>
+                  </li>
+            
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<h3 class="tit">Reserva tus entradas</h3>
+<div class="row container-fluid">
+    <div class="col-md-4 col-sm-8 col-xs-10 col-centered thumbnail xd">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                <img src="~/images/PELI-9.jpg" class="ppp" width="170" />
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 text-xs-center ppp">
+                <span class="SubHeader">FUNCIÓN</span><br /><span class="sub1">5:00 PM</span> <br />
+                <span class="SubHeader">CINEKONG</span><br /><span class="sub1">Santa Anita</span> <br />
+                <span class="SubHeader">PELÍCULA </span><br /><span class="sub1">Venom</span> <br />
+                <span class="SubHeader">FECHA</span><br /><span class="sub1">Martes 30 de Octubre</span> <br />
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<table class="table table-borderless text-center">
+    <thead>
+        <tr class="">
+            <th class="text-center">TIPO</td>
+            <th class="text-center">SUBTOTAL</td>
+            <th class="text-center">COSTO</td>
+            <th class="text-center">CANTIDAD</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Niños</td>
+            <td id="precio">S/.12.00</td>
+            <td id="costo">S/.0.00</td>
+            <td>
+                <button class="btn-xs btncircle" onclick="sumcant(this)">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                &nbsp;&nbsp;
+                <span>0</span>
+                &nbsp;&nbsp;
+                <button class="btn-xs btncircle" onclick="rescant(this)">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>3ra Edad</td>
+            <td id="precio">S/.12.00</td>
+            <td id="costo">S/.0.00</td>
+            <td>
+                <button class="btn-xs btncircle" onclick="sumcant(this)">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                &nbsp;&nbsp;
+                <span>0</span>
+                &nbsp;&nbsp;
+                <button class="btn-xs btncircle" onclick="rescant(this)">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>Adulto</td>
+            <td id="precio">S/.12.00</td>
+            <td id="costo">S/.0.00</td>
+            <td>
+                <button class="btn-xs btncircle" onclick="sumcant(this)">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                &nbsp;&nbsp;
+                <span>0</span>
+                &nbsp;&nbsp;
+                <button class="btn-xs btncircle" onclick="rescant(this)">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>Niños Pref.</td>
+            <td id="precio">S/.12.00</td>
+            <td id="costo">S/.0.00</td>
+            <td>
+                <button class="btn-xs btncircle" onclick="sumcant(this)">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                &nbsp;&nbsp;
+                <span>0</span>
+                &nbsp;&nbsp;
+                <button class="btn-xs btncircle" onclick="rescant(this)">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>3ra Edad Pref.</td>
+            <td id="precio">S/.12.00</td>
+            <td id="costo">S/.0.00</td>
+            <td>
+                <button class="btn-xs btncircle" onclick="sumcant(this)">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                &nbsp;&nbsp;
+                <span>0</span>
+                &nbsp;&nbsp;
+                <button class="btn-xs btncircle" onclick="rescant(this)">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>Adulto Pref.</td>
+            <td id="precio">S/.12.00</td>
+            <td id="costo">S/.0.00</td>
+            <td>
+                <button class="btn-xs btncircle" onclick="sumcant(this)">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                &nbsp;&nbsp;
+                <span>0</span>
+                &nbsp;&nbsp;
+                <button class="btn-xs btncircle" onclick="rescant(this)">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<div class="text-center">
+    <a class="btn btn-danger" asp-controller="InicioSesion" asp-action="ElegirButacaIS">
+        Siguiente
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>

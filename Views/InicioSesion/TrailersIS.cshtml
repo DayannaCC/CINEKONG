@@ -1,0 +1,136 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Trailers</title>
+<link rel="stylesheet" href="~/css/styleIndex.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/stylenoticias.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/styleTrailers.css" asp-append-version="true" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+           <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+   <nav class="navbar navbar-inverse navbar-fixed-top" style="padding:10px">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                
+    <a asp-area="" asp-controller="InicioSesion" asp-action="IndexIS" class="navbar-brand">
+        <img src="~/images/logo-app.png" height="30"  style="margin-top:-5px;" />
+    </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IndexIS">Inicio</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PeliculasIS">Peliculas</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="TrailersIS">Trailers</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="NoticiasIS">Noticias</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PruebaIS">Prueba</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <!--  
+                    <li class="fuente"><a asp-area="" asp-controller="Registro" asp-action="Registrarse"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IniciarSesion"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
+                    -->
+                     <li class="fuente dropdown"><a class="glyphicon glyphicon-user" data-toggle="dropdown" href="#"> 
+                         <span class="caret"></span>@ViewBag.Nombre</a>  
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Configuración</a></li>
+                      <li><a href="#">Mis eventos</a></li>
+                      <li><a href="#">Asociar</a></li>
+                      <li><a href="/Home/index">Salir</a></li>
+
+                    </ul>
+                  </li>
+            
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+  
+  <style>
+  body {
+      position: relative;
+  }
+
+
+  div.col-8 div {
+      height: 500px;
+  }
+  </style>
+
+</head>
+
+<h3 class="subtitulos" style="margin-top:40px;">ESTRENOS 2019</h3>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="list-group" style="margin-top: -8px;">
+    <a href="#section1" class="list-group-item">Cómo entrenar a tu Dragón 3</a>
+    <a href="#section2" class="list-group-item">La llorona</a>
+    <a href="#section3" class="list-group-item">Aladdín</a>
+    </div>
+
+    <div class="col-md-12 col-8 ">
+        <h3 class="subtitulos">Cómo entrenar a tu Dragón 3</h3>
+      <div id="section1" style="margin-top: -15px" ">    
+              <iframe id="video" src="https://www.youtube.com/embed/rlRz2T_IeyI""> </iframe>
+              <div id="cajaTexto">
+                              <p id="texto">Cómo entrenar a tu Dragón 3 Trailer Oficial #2 Español Latino 22 de marzo de 2019, Solo en Cines Continúan las aventuras del adolescente vikingo Hipo y su fiel dragón Desdentao. En esta ocasión, mientras Hipo cumple su sueño de crear un mundo utópico en el que los dragones vivan en paz, Desdentao descubrirá a una salvaje y escurridiza pareja que le apartará de su furia nocturna. Pero cuando la amenaza llame a la puerta de casa, y el gobierno del reino de Hipo esté en peligro, ambos, dragón y jinete, deberán llevar a cabo decisiones imposibles para salvar a los suyos. </p>
+
+              </div>
+              
+       
+      </div>
+      <h3 class="subtitulos">La llorona</h3>
+      <div id="section2" class="bg-secondary hh2" style="margin-top: -15px"> 
+        
+          <iframe id="video" src="https://www.youtube.com/embed/sx1p1AIHjY4"> </iframe>
+              <div id="cajaTexto">
+                              <p id="texto"> La Llorona Trailer Oficial, estreno el 19 de Abril de 2019, se ubicará en 1973 y narrará la historia de la trabajadora social Anna Garcia, quien comenzará a investigar un caso para descubrir un asesinato a manos de una fuerza supernatural, en el que encuentra similitudes con el fantasma que atormenta a su familia. Al tratar de obtener ayuda de un sacerdote local que se convierte en chamán, interpretado por Raymond Cruz (‘Breaking Bad’), Anna es poseída por el fantasma de La Llorona y nada la detendrá para encontrar a sus hijos.</p>
+              </div>
+      </div>   
+      <h3 class="subtitulos">Aladdín </h3>     
+      <div id="section3" class="bg-secondary hh2" style="margin-top: -15px">         
+        
+          <iframe id="video" src="https://www.youtube.com/embed/-bqfol-h-sI"> </iframe>
+              <div id="cajaTexto">
+          <p id="texto">Aladdín Disney Trailer Oficial, estreno 24 de mayo de 2019, Solo en Cines La versión de Disney Live-Action sobre el ladrón árabe que halla una lámpara mágica y busca ganar el amor de una princesa.</p>
+
+          </div>
+      </div>
+      <h3 class="subtitulos">Capitana Marvel</h3>
+      <div id="section3" class="bg-secondary hh2" style="margin-top: -15px">         
+        
+          <iframe id="video" src="https://www.youtube.com/embed/sE67uodyRfI"> </iframe>
+              <div id="cajaTexto">
+          <p id="texto">'Captain Marvel' será la primera película de Marvel Studios protagonizada por una mujer y se centrará en la historia de Carol Danvers, quien fue creada en 1968 y apareció por primera vez en 'Marvel Super-Heroes #13' como Captain Mar-Vell, 
+              una alienígena enviada para estudiar el planeta Tierra bajo la identidad de una agente de seguridad americana. Sus poderes provienen de la fusión de su ADN humano con genes de la raza alienígena conocida como Kree. No obstante, 
+              Carol Danvers tuvo que esperar hasta el año 2012 para heredar el título de Captain Marvel. Brie Larson ('La habitación') es la protagonista de esta aventura superheroica que contará con el guión de Meg LeFauve ('Del revés') y Nicole Perlman ('Guardianes de la galaxia'). 
+              Kevin Feige es el productor. Esta es una de las grandes apuestas de la Fase 3 de Marvel que completan 'Dr. Strange', 'Spider-Man: Homecoming' y 'Black Panther'.</p>
+
+          </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+
+

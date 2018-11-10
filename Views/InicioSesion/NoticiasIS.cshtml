@@ -1,0 +1,199 @@
+@{
+    ViewData["Title"] = "NOTICIAS";
+}
+<link rel="stylesheet" href="~/css/stylenoticias.css" asp-append-version="true" />
+<nav class="navbar navbar-inverse navbar-fixed-top" style="padding:10px">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                
+    <a asp-area="" asp-controller="InicioSesion" asp-action="IndexIS" class="navbar-brand">
+        <img src="~/images/logo-app.png" height="30"  style="margin-top:-5px;" />
+    </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IndexIS">Inicio</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PeliculasIS">Peliculas</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="TrailersIS">Trailers</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="NoticiasIS">Noticias</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PruebaIS">Prueba</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <!--  
+                    <li class="fuente"><a asp-area="" asp-controller="Registro" asp-action="Registrarse"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IniciarSesion"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
+                    -->
+                     <li class="fuente dropdown"><a class="glyphicon glyphicon-user" data-toggle="dropdown" href="#"> 
+                         <span class="caret"></span>@ViewBag.Nombre</a>  
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Configuración</a></li>
+                      <li><a href="#">Mis eventos</a></li>
+                      <li><a href="#">Asociar</a></li>
+                      <li><a href="/Home/index">Salir</a></li>
+
+                    </ul>
+                  </li>
+            
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="subtitulos subT" class="col-md-12">NOTICIAS DE CINE</h3>
+            <div class="col-md-12 h1">
+                <div class="col-md-6 hh1" style="margin-left:-10px; margin-right:10px;">
+                    <div class="col-md-7">
+                        <h4><a href="https://elcomercio.pe/economia/dia-1/cine-nacional-venderan-50-millones-entradas-2018-noticia-570082">
+                        Cine nacional: Se venderán 50 millones de entradas en el 2018</a></h4>
+                        <p>Actualmente, existen 629 salas y se prevé que llegarán a 700 en el 2019, según New Century Films</p>
+                    </div>
+                    <div class="col-md-5 picture"> 
+                        <img src="~/images/not1.jpg" width="100%" height="150px"/>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6 hh1" style="margin-left:10px; margin-right:-10px;">
+                    <div class="col-md-7">
+                        <h4><a href="https://elcomercio.pe/tvmas/farandula/martin-scorsese-remece-mundo-cinematografico-declaraciones-noticia-568703">
+                        Martin Scorsese remece el mundo cinematográfico con estas declaraciones</a></h4> 
+                        <p>El cineasta estadounidense rindió declaraciones durante un encuentro con el público en España</p>
+                    </div>
+                    <div class="col-md-5 picture"> 
+                        <img src="~/images/not2.jpg"  width="100%" height="150px" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 h2">
+                    <div class="col-md-4 picture hh2" style="margin-left: -10px; margin-right:10px;"> 
+                        <img src="~/images/not3.jpg"  width="100%" height="60%"/><br>
+                        <h4><a href="https://mag.elcomercio.pe/respuestas/estrenos-2019-peliculas-llegan-cine-proximo-ano-fecha-estreno-infinity-war-glass-wonder-woman-dark-phoenix-nnda-nnlt-noticia-564161">
+                       Estrenos 2019: ¿qué películas llegan al cine el próximo año?</a></h4> 
+                        <p>Esta es la fecha de estreno de las pelis más esperadas en la cartelera del 2019</p>
+                    </div>                                      
+                    <div class="col-md-4 picture hh2"> 
+                        <img src="~/images/not4.jpg"  width="100%" height="60%" /><br>
+                        <h4><a href="https://elcomercio.pe/luces/cine/the-predator-significa-escena-final-pelicula-accion-depredador-franquicia-cine-nnda-noticias-557970">
+                       'El Depredador': ¿Qué significa el final?</a></h4> 
+                        <p>Cuidado, alerta de spoiler. "El Depredador" es la más reciente película de la franquicia de ficcion y 
+                            terror que ofrece algunas respuestas a los misterios que envuelven a la raza cazadora </p>
+                    </div>                                      
+                    <div class="col-md-4 picture hh2" style="margin-left:10px; margin-right:-10px;"> 
+                        <img src="~/images/not5.jpg"  width="100%" height="60%" /><br>
+                        <h4><a href="https://www.ecartelera.com/noticias/vengadores-4-frank-grillo-confirma-flashbacks-50103/">
+                       'Vengadores 4': Frank Grillo confirma que habrá flashbacks y la aparición de Crossbones</a></h4> 
+                        <p>El actor Frank Grillo confirma que Crossbones, uno de los villanos del Capitán América, volverá a aparecer</p>
+                    </div>                                      
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h3 class="subtitulos" class="col-md-12">ULTIMAS NOTICIAS</h3>
+            <div class="col-md-12 m1">
+                <div class="col-md-8">
+                    <h4><a href="https://www.ecartelera.com/noticias/preguntas-como-entrenar-dragon-3-respuesta-50101/">
+                        5 preguntas de 'Cómo entrenar a tu dragón 3' para las que ya tenemos respuesta</a></h4>
+                        <p>Dean DeBlois y Brad Lewis, director y productor de 'Cómo entrenar a tu dragón 3', 
+                            visitaron Madrid para presentar un avance de la última aventura de Hipo y Desdentao.</p>
+                </div>
+                <div class="col-md-4 picture"> 
+                    <img src="~/images/not6.jpg"  width="100%" height="150px" />
+                </div>
+            </div>
+            <div class="col-md-12 m1">
+                <div class="col-md-8">
+                    <h4><a href="https://www.ecartelera.com/noticias/critica-el-arbol-de-la-sangre-julio-medem-50110/">
+                        'El árbol de la sangre': España una, grande, salvaje y trágica</a></h4>
+                        <p>Julio Medem vuelve en plena forma con un reparto de leyendas del cine español liderado por unos magníficos Úrsula Corberó y Álvaro Cervantes.</p>
+                </div>
+                <div class="col-md-4 picture"> 
+                    <img src="~/images/not7.jpg"  width="100%" height="150px" />
+                </div>
+            </div>
+            <div class="col-md-12 m1">
+                <div class="col-md-8">
+                    <h4><a href="https://www.ecartelera.com/noticias/razones-todos-locos-con-bodyguard-50097/">
+                        'Bodyguard', la mezcla perfecta de tensión imposible, sospecha infinita y sensualidad noventera</a></h4>
+                        <p>Jed Mercurio ('Line of Duty'), escribe y dirige esta serie que acaba de aterrizar en Netflix 
+                            tras arrasar en la BBC reuniendo a más de 17 millones de espectadores con su último episodio.</p>
+                </div>
+                <div class="col-md-4 picture"> 
+                    <img src="~/images/not8.jpg"  width="100%" height="150px" />
+                </div>
+            </div>
+            <div class="col-md-12 m1">
+                <div class="col-md-8">
+                    <h4><a href="https://www.ecartelera.com/noticias/kingsman-brad-pitt-rachel-weisz-podrian-precuela-50108/">
+                        'Kingsman': Brad Pitt y Rachel Weisz podrían incorporarse a la precuela</a></h4>
+                        <p>La película ambientada en la Primera Guerra Mundial contará los orígenes de esta sociedad de espías británicos.</p>
+                </div>
+                <div class="col-md-4 picture"> 
+                    <img src="~/images/not9.jpg"  width="100%" height="150px" />
+                </div>
+            </div>
+            <div class="col-md-12 m1">
+                <div class="col-md-8">
+                    <h4><a href="https://www.ecartelera.com/noticias/posible-secuela-la-noche-de-halloween-50106/">
+                        ¿Habrá secuela de 'La noche de Halloween'?</a></h4>
+                        <p>Danny McBride, uno de los guionistas de 'La noche de Halloween', ha confirmado que el equipo de guion 
+                            está ya preparando las posibles secuelas de la película tras el éxito obtenido.</p>
+                </div>
+                <div class="col-md-4 picture"> 
+                    <img src="~/images/not10.jpg"  width="100%" height="150px" />
+                </div>
+            </div>
+            <div class="col-md-12 m1">
+                <div class="col-md-8">
+                    <h4><a href="https://www.ecartelera.com/noticias/ralph-rompe-internet-princesas-disney-control-secuela-50107/">
+                        'Ralph Rompe Internet': Las princesas Disney tuvieron mucho control en la secuela</a></h4>
+                        <p>Más allá de dar voz, las actrices han sido clave para dar forma a esta renovada versión de las icónicas princesas Disney.</p>
+                </div>
+                <div class="col-md-4 picture"> 
+                    <img src="~/images/not11.jpg"  width="100%" height="150px" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h3 class="subtitulos" class="col-md-12">CRÍTICAS </h3>
+            <div class="col-md-12 picture"> 
+                <img src="~/images/cri1.jpg"  width="100%" height="50%" style="position:relative"/>
+                <div><a href="https://elcomercio.pe/luces/cine/impreso-esposa-nuestra-critica-pelicula-glenn-close-noticia-565299" style="color:white;">
+                    'La esposa': nuestra crítica a la película de Glenn Close</a></div> 
+            </div>
+            <div class="col-md-12 picture"> 
+                <img src="~/images/cri2.jpg"  width="100%" height="50%" style="position:relative"/>
+                <div><a href="https://elcomercio.pe/luces/cine/pequeno-favor-nuestra-critica-pelicula-blake-lively-anna-kendrick-noticia-567546" style="color:white;">
+                    'Un pequeño favor': nuestra crítica a la película de Blake Lively y Anna Kendrick</a></div> 
+            </div>
+            <div class="col-md-12 picture"> 
+                <img src="~/images/cri3.jpg"  width="100%" height="50%" style="position:relative"/>
+                <div><a href="https://www.ecartelera.com/noticias/critica-sword-art-online-pelicula-ordinal-scale-50094/" style="color:white;">
+                    'Sword Art Online: Ordinal Scale': Reflexión tecnológica</a></div> 
+            </div>
+            <div class="col-md-12 picture"> 
+                <img src="~/images/cri4.jpg"  width="100%" height="50%" style="position:relative"/>
+                <div style="bottom: 57px; margin-bottom:-18px;"><a href="https://www.ecartelera.com/noticias/critica-pesadillas-2-noche-de-halloween-50019/" style="color:white;">
+                    'Pesadillas 2: Noche de Halloween': Otra entretenida aventura familiar para pasarlo de miedo</a></div> 
+            </div>
+            <div class="col-md-12 picture"> 
+                <img src="~/images/cri5.jpg"  width="100%" height="50%" style="position:relative"/>
+                <div><a href="https://www.ecartelera.com/noticias/critica-de-el-fotografo-de-mauthausen-50096/" style="color:white;">
+                    'El fotógrafo de Mauthausen': heroicidad perdida y retrato del pánico</a></div> 
+            </div>
+            <div class="col-md-12 picture" > 
+                <img src="~/images/cri6.jpg"  width="100%" height="50%" style="position:relative"/>
+                <div style="bottom: 18px;"><a href="https://www.ecartelera.com/noticias/critica-bernarda-50082/" style="color:white;">
+                    'Bernarda': Las santas cortesanas</a></div> 
+            </div>
+        </div>
+    </div>
+</div>

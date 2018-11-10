@@ -1,5 +1,5 @@
 ﻿<link rel="stylesheet" href="~/css/stylePelicula.css" asp-append-version="true" />
-<nav class="navbar navbar-inverse navbar-fixed-top" style="padding:10px">
+ <nav class="navbar navbar-inverse navbar-fixed-top" style="padding:10px">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -10,25 +10,25 @@
                 </button>
 
                 
-    <a asp-area="" asp-controller="InicioSesion" asp-action="Index" class="navbar-brand">
+    <a asp-area="" asp-controller="InicioSesion" asp-action="IndexIS" class="navbar-brand">
         <img src="~/images/logo-app.png" height="30"  style="margin-top:-5px;" />
     </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="fuente"><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
-                    <li class="fuente"><a asp-area="" asp-controller="Home" asp-action="Peliculas">Peliculas</a></li>
-                    <li class="fuente"><a asp-area="" asp-controller="Home" asp-action="Trailers">Trailers</a></li>
-                    <li class="fuente"><a asp-area="" asp-controller="Home" asp-action="Noticias">Noticias</a></li>
-                    <li class="fuente"><a asp-area="" asp-controller="Home" asp-action="Prueba">Prueba</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IndexIS">Inicio</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PeliculasIS">Peliculas</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="TrailersIS">Trailers</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="NoticiasIS">Noticias</a></li>
+                    <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="PruebaIS">Prueba</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <!--  
                     <li class="fuente"><a asp-area="" asp-controller="Registro" asp-action="Registrarse"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
                     <li class="fuente"><a asp-area="" asp-controller="InicioSesion" asp-action="IniciarSesion"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
                     -->
-                     <li class="fuente dropdown"><a class="glyphicon glyphicon-user" data-toggle="dropdown" href="#"> @ViewBag.Nombre 
-                         <span class="caret"></span></a>
+                     <li class="fuente dropdown"><a class="glyphicon glyphicon-user" data-toggle="dropdown" href="#"> 
+                         <span class="caret"></span>@ViewBag.Nombre</a>  
                     <ul class="dropdown-menu">
                       <li><a href="#">Configuración</a></li>
                       <li><a href="#">Mis eventos</a></li>
