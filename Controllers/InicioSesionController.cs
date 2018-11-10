@@ -42,12 +42,32 @@ namespace CINEKONG.Controllers
         [HttpPost]
 		public IActionResult Iniciar(IniciarSesion iniciar)
 		{
-            ViewData["Message"] = "";
-            HttpContext.Session.SetString("User", iniciar.Email);
-            var objUser = HttpContext.Session.GetString("User");
-            Console.WriteLine("Entro2"+ objUser);
+            try{
+                 var usuario = (from m in _context.Usuario where (m.Correo == iniciar.Email && m.Contraseña ==iniciar.Contra)  select m.Correo).Single();
+                 
+                 HttpContext.Session.SetString("User", usuario);
+                 var objUser = HttpContext.Session.GetString("User");
+                 ViewBag.Nombre = "MARCO";
+                 Console.WriteLine("Entro2"+ objUser);
+               
+            }catch(Exception e){
+                Console.WriteLine(e);
+                return View("IniciarSesion");
+            }
+           
             
-            return View("IniciarSesion",iniciar);
+            
+            
+            
+            
+            
+            
+             return RedirectToAction("PeliculasIS");
 		}
+
+
+        public IActionResult PeliculasIS(){
+            return View();
+        }
     }
 }
